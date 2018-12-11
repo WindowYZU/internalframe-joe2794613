@@ -7,6 +7,7 @@ package lendle.courses.wp.internalframesamples;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -31,7 +32,15 @@ public class InternalFrameInFrame {
         //create a JInternalFrame
         //try to make it visible
         //setVisible, setSize, setPreferredSize......
-        
+        JDesktopPane jDesktopPane=new JDesktopPane();
+        frame.setContentPane(jDesktopPane);
+        JInternalFrame jInternalFrame=new JInternalFrame();
+        frame.add(jInternalFrame);
+        jInternalFrame.setSize(300,300);
+        jInternalFrame.setVisible(true);
+        jInternalFrame.setMaximizable(true);
+        jInternalFrame.setIconifiable(true);
+        jInternalFrame.setResizable(true);
         ///////////////////////////
         frame.setVisible(true);
     }
